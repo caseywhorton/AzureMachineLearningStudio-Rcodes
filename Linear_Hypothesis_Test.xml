@@ -1,0 +1,45 @@
+<Module name = "Linear Hypothesis Test">
+	<Owner>Casey Whorton</Owner>
+	<Description>Fits a linear model for selected target feature using selected model features, then computes a linear hypothesis test for selected test feature coefficients = 0.  Both Ordinary Least Squares (OLS) and heteroscedasticity-consistent covariance matrices (HAC) are used.  Optional: compute the test statistic and p-value for both a Durbin-Watson and a studentized Breusch-Pagan test.</Description>
+	
+
+	<Language name="R"
+	 sourceFile="Linear_Hypothesis_Test.R"
+	 entryPoint="Linear_Hypothesis_Test" />
+
+	<Ports>
+		<Input id = "dataset1" name="Dataset 1" type="DataTable">
+			<Description>Input dataset</Description>
+		</Input>
+
+		<Output id = "dataset" name="Dataset" type="DataTable">
+			<Description>Output dataset</Description>
+		</Output>
+
+		<Output id = "deviceOutput" name="View Port" type="Visualization">
+			<Description>View R graphics device output</Description>
+		</Output>
+
+	</Ports>
+
+	<Arguments>
+		<Arg id="target_var" name="Target Feature" type="ColumnPicker">
+			<Properties portId="dataset1" allowedTypes="All" default="None"/>
+			<Description>Target Feature Name</Description>
+		</Arg>
+
+		<Arg id="model_vars" name="Model Features" type="ColumnPicker">
+			<Properties portId="dataset1" allowedTypes="All" default="None"/>
+			<Description>Model Feature Names</Description>
+		</Arg>
+		
+		<Arg id="test_vars" name="Hypothesized Features" type="ColumnPicker">
+			<Properties portId="dataset1" allowedTypes="All" default="None"/>
+			<Description>Feature Names Hypothesized is zero</Description>
+		</Arg>
+
+		<Arg id="dwbp" name="Durbin-Watson Breusch-Pagan" type="bool">
+			<Description>Selector for extra fit statistics</Description>
+		</Arg>
+	</Arguments>
+</Module>
