@@ -1,0 +1,39 @@
+<!--Define a module using R script -->
+<Module name = "Lead and Lag Generator">
+	<Owner>Casey Whorton</Owner>
+	<Description>This node selects features from the input dataset, creates the desired number of leads and lags, and then binds them to the original dataset.  Generating a time index column is optional.  Note: A time index starts at 1</Description>
+
+<!--Specifiy base language -->
+	<Language name = "R"
+	sourceFile="leads_lags_function.R"
+	entryPoint = "leads_lags" />
+
+<!--Define module input and output ports -->
+	<Ports>
+		<Input id = "dataset1" name="Dataset 1" type="DataTable">
+			<Description>Input dataset</Description>
+		</Input>
+		<Output id="dataset" name="Dataset" type="DataTable">
+			<Description>The modified dataset</Description>
+		</Output>
+	</Ports>
+
+<!--Define module parameters -->
+	<Arguments>
+		<Arg id="colset" name="Column Set" type="ColumnPicker">      
+     	 		<Properties portId="dataset1" allowedTypes="Numeric" default="NumericAll"/>
+      			<Description>Column set</Description>
+    		</Arg>
+		<Arg id="leads" name="Leads" type="int">
+			<Properties min="0" max="100" default="0"/>
+			<Description>Pick number of leads</Description>
+		</Arg>
+		<Arg id="lags" name="Lags" type="int">
+			<Properties min="0" max="100" default="0"/>
+			<Description>Pick number of lags</Description>
+		</Arg>
+		<Arg id="TimeIndex" name = "Time Index" type = "bool">
+			<Description>Generates a time index starting at 1</Description>
+		</Arg>
+	</Arguments>
+</Module>
