@@ -14,14 +14,19 @@
 - "Not useful is needing a dataframe or matrix output, this project produces a table of values that informs the data scientist about what variables to include in the pipeline, preferably separate from a node with this script."
 
 * **Example**
-- "THIS NEEDS COMPLETED"
+- Output Example:
+  - https://caseywhorton.files.wordpress.com/2017/05/output2.png?w=616
 
 * **Getting Started**
 - Installation
-  - R shell
-  - R-studio
-  - Microsoft Azure Machine Learning Studio
-  - Link to my blog post on this subject
+  - "You will need to install the R shell, which is responsible for compiling and running the R script."
+    - R shell: https://www.r-project.org/
+  - "R-studio is a convenient way to edit and view your R scripts."
+    - R-studio: https://www.rstudio.com/
+  - "You will need to have a Microsoft account or create an account.  As of 2017, there is a free tier that allows you experiment and practice with this tool."
+    - Microsoft Azure Machine Learning Studio: https://studio.azureml.net
+  - "For more background on the linear hypothesis test and a look at the output can be found here:"
+    - Blog Post On Subject: https://caseywhorton.wordpress.com/2017/05/17/linear-hypothesis-test-custom-r-module-code-and-thoughts/
 
 * **Leads and Lags Generator**
 - "Description"
