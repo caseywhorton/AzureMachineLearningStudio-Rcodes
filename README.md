@@ -25,8 +25,14 @@
       - R-studio: https://www.rstudio.com/
     - "You will need to have a Microsoft account or create an account.  As of 2017, there is a free tier that allows you experiment and practice with this tool."
       - Microsoft Azure Machine Learning Studio: https://studio.azureml.net
+    - "The two scripts contained need to be zipped into a zip folder."
     - "For more background on the linear hypothesis test and a look at the output can be found here:"
       - Blog Post On Subject: https://caseywhorton.wordpress.com/2017/05/17/linear-hypothesis-test-custom-r-module-code-and-thoughts/
+
+* **Scripts**
+  - R script: "Linear_Hypothesis_Test.r"
+  - XML Script: "Linear_Hypothesis_Test.xml"
+
 
 * **Leads and Lags Generator**
   - "Generate leads and lags for time series variables in a dataframe and recombine into that same dataframe for a full set of variables with whatever number of leads and lags the end-user wants."
@@ -49,9 +55,15 @@
       - R-studio: https://www.rstudio.com/
     - "You will need to have a Microsoft account or create an account.  As of 2017, there is a free tier that allows you experiment and practice with this tool."
       - Microsoft Azure Machine Learning Studio: https://studio.azureml.net
+    - "The two scripts contained need to be zipped into a zip folder."
     - "More background on the lead and lags generator R custom model and a look at the output can be found here:"
       - https://caseywhorton.wordpress.com/2017/05/06/generating-leads-and-lags-custom-r-module-in-azure-machine-learning-studio/
-    
+
+* **Scripts**
+  - R script: "leads_lags_function.R "
+  - XML Script: "leads_lags_function.xml "
+
+
 ## Supporting Documentation
 
 * **README Formatting Style Guide**
